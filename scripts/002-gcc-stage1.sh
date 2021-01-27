@@ -48,7 +48,6 @@ rm -rf mkdir build-$TARGET-stage1 && mkdir build-$TARGET-stage1 && cd build-$TAR
   --disable-libquadmath \
   --disable-libssp \
   --disable-libstdcxx-pch \
-  --disable-lto \
   --disable-multilib \
   --disable-nls \
   --disable-shared \

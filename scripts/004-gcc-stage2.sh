@@ -48,7 +48,6 @@ rm -rf build-$TARGET-stage2 && mkdir build-$TARGET-stage2 && cd build-$TARGET-st
   --disable-libquadmath \
   --disable-libssp \
   --disable-libstdcxx-pch \
-  --disable-lto \
   --disable-multilib \
   --disable-nls \
   --disable-shared \
