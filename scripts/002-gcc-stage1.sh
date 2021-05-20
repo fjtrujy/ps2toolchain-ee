@@ -2,7 +2,7 @@
 # 002-gcc-stage1.sh by Francisco Javier Trujillo Mata (fjtrujy@gmail.com)
 
 ## Download the source code.
-REPO_URL="https://github.com/ps2dev/gcc.git"
+REPO_URL="https://github.com/fjtrujy/gcc.git"
 REPO_FOLDER="gcc"
 BRANCH_NAME="ee-v11.1.0"
 if test ! -d "$REPO_FOLDER"; then
