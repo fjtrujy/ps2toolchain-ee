@@ -43,7 +43,7 @@ PROC_NR=$(getconf _NPROCESSORS_ONLN)
 rm -rf build-$TARGET && mkdir build-$TARGET && cd build-$TARGET || { exit 1; }
 
 ## Configure the build.
-CFLAGS_FOR_TARGET="-DPREFER_SIZE_OVER_SPEED=1 -G0 -Os" ../configure \
+CFLAGS_FOR_TARGET="-DPREFER_SIZE_OVER_SPEED=1 -Os" ../configure \
 	--target="$TARGET" \
 	--prefix="$PS2DEV_TMP/$TARGET_ALIAS" \
 	--disable-newlib-supplied-syscalls \

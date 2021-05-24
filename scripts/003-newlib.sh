@@ -34,7 +34,7 @@ PROC_NR=$(getconf _NPROCESSORS_ONLN)
 rm -rf build-$TARGET && mkdir build-$TARGET && cd build-$TARGET || { exit 1; }
 
 ## Configure the build.
-CFLAGS_FOR_TARGET="-G0 -O2" ../configure \
+CFLAGS_FOR_TARGET="-O2" ../configure \
   --prefix="$PS2DEV/$TARGET_ALIAS" \
   --target="$TARGET" \
   $TARG_XTRA_OPTS || { exit 1; }
