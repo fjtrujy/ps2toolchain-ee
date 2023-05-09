@@ -1,5 +1,5 @@
 # First stage of Dockerfile
-FROM alpine:latest
+FROM alpine:3.13
 
 ENV PS2DEV /usr/local/ps2dev
 ENV PATH   $PATH:${PS2DEV}/ee/bin
@@ -10,7 +10,7 @@ RUN apk add build-base bash gcc git make flex bison texinfo gmp-dev mpfr-dev mpc
 RUN cd /src && ./toolchain.sh
 
 # Second stage of Dockerfile
-FROM alpine:latest
+FROM alpine:3.13
 
 ENV PS2DEV /usr/local/ps2dev
 ENV PATH   $PATH:${PS2DEV}/ee/bin
