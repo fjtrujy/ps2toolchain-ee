@@ -1,5 +1,5 @@
 # First stage of Dockerfile
-FROM alpine:3.16
+FROM alpine:latest
 
 ENV PS2DEV /usr/local/ps2dev
 ENV PATH   $PATH:${PS2DEV}/ee/bin
