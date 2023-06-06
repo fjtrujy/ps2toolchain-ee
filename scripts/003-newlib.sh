@@ -49,6 +49,7 @@ for TARGET in "mips64r5900el-ps2-elf"; do
   CFLAGS_FOR_TARGET="-O2" ../configure \
     --prefix="$PS2DEV/$TARGET_ALIAS" \
     --target="$TARGET" \
+    --enable-newlib-retargetable-locking \
     $TARG_XTRA_OPTS
 
   ## Compile and install.

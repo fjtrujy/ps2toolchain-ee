@@ -25,14 +25,17 @@ TARGET_ALIAS="ee"
 TARG_XTRA_OPTS=""
 OSVER=$(uname)
 
+# Workaround to build with newer mingw-w64 https://github.com/msys2/MINGW-packages/commit/4360ed1a7470728be1dba0687df764604f1992d9
 if [ "${OSVER:0:10}" == MINGW64_NT ]; then
   export lt_cv_sys_max_cmd_len=8000
   export CC=x86_64-w64-mingw32-gcc
   TARG_XTRA_OPTS="--host=x86_64-w64-mingw32"
+  export CPPFLAGS="-DWIN32_LEAN_AND_MEAN -DCOM_NO_WINDOWS_H"
 elif [ "${OSVER:0:10}" == MINGW32_NT ]; then
   export lt_cv_sys_max_cmd_len=8000
   export CC=i686-w64-mingw32-gcc
   TARG_XTRA_OPTS="--host=i686-w64-mingw32"
+  export CPPFLAGS="-DWIN32_LEAN_AND_MEAN -DCOM_NO_WINDOWS_H"
 fi
 
 ## Determine the maximum number of processes that Make can work with.

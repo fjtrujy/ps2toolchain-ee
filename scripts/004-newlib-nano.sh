@@ -69,6 +69,7 @@ for TARGET in "mips64r5900el-ps2-elf"; do
     --enable-lite-exit \
     --enable-newlib-global-atexit \
     --enable-newlib-nano-formatted-io \
+    --enable-newlib-retargetable-locking \
     --disable-nls \
     $TARG_XTRA_OPTS
 
